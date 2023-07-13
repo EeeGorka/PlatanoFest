@@ -1631,6 +1631,12 @@ h6 {
   color: #c4c4c4;
 }
 
+@media (min-width: 19.9375em) {
+  .btn_border-big {
+    min-height: 3.125rem;
+  }
+}
+
 @media (min-width: 26.25em) {
   .btn_border-big {
     font-size: 1.25rem;
@@ -1711,12 +1717,6 @@ h6 {
 
   .map__body {
     padding-top: 5.625rem;
-  }
-}
-
-@media (min-width: 20em) {
-  .btn_border-big {
-    min-height: 3.125rem;
   }
 }
 
@@ -2104,16 +2104,16 @@ h6 {
 }
 }
 
-@media (min-width: 20em) and (max-width: 20em) {
-@supports (min-height: clamp( 2.5rem , calc(-infinity)rem  +  calc(infinity)vw , 3.125rem )) {
+@media (min-width: 20em) and (max-width: 19.9375em) {
+@supports (min-height: clamp( 2.5rem , 202.5rem  +  -1000vw , 3.125rem )) {
     .btn_border-big {
-      min-height: clamp( 2.5rem , calc(-infinity)rem  +  calc(infinity)vw , 3.125rem );
+      min-height: clamp( 2.5rem , 202.5rem  +  -1000vw , 3.125rem );
     }
 }
 
-@supports not (min-height: clamp( 2.5rem , calc(-infinity)rem  +  calc(infinity)vw , 3.125rem )) {
+@supports not (min-height: clamp( 2.5rem , 202.5rem  +  -1000vw , 3.125rem )) {
     .btn_border-big {
-      min-height: calc(2.5rem + 0.625 * (100vw - 20rem) / 0);
+      min-height: calc(2.5rem + 0.625 * (100vw - 20rem) / -0.0625);
     }
 }
 }

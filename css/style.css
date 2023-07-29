@@ -212,7 +212,11 @@ h6 {
   color: #fff;
 }
 
-.tabs__body:not([hidden]) {
+.tabs__content {
+  position: relative;
+}
+
+.tabs__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,6 +224,24 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 4.375rem;
+}
+
+.tabs__body:not([hidden]) {
+  opacity: 1;
+  -webkit-transition: 0.3s ease 0s;
+  -o-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+}
+
+.tabs__body[hidden] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.3s ease 0s;
+  -o-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
 }
 
 .fp-init body {
@@ -1768,7 +1790,7 @@ h6 {
 }
 
 @media (max-width: 45em) {
-  .tabs__body:not([hidden]) {
+  .tabs__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1928,7 +1950,7 @@ h6 {
 }
 
 @media (max-width: 55.625em) {
-  .menu-open .tabs__body:not([hidden]) {
+  .menu-open .tabs__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
